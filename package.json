@@ -1,0 +1,29 @@
+{
+  "name": "koa-books",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint-fix": "./node_modules/.bin/eslint . --fix"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "3.3.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "koa": "2.13.4",
+    "koa-parser": "^1.0.8",
+    "koa-router": "^10.1.1",
+    "postgres": "^3.1.0",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "eslint": "8.13.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "nodemon": "2.0.15"
+  }
+}

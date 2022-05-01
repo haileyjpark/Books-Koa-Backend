@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  internship-postgres:
+    container_name: 
+    image: 
+    restart: always
+    ports:
+      - '6432:5432'
+    environment:
+      - POSTGRES_USER=
+      - POSTGRES_PASSWORD=
+      - POSTGRES_DB=
+    volumes:
+      - 
+
+  # internship-zookeeper:
+  #   container_name: internship-zookeeper
+  #   image: 
+  #   hostname: 
+  #   ports:
+  #     - '3181:3181'
+  #   environment:
+  #     ZOOKEEPER_CLIENT_PORT: 
+  #   volumes:
+  #     - internship-zk-data:
+  #     - internship-zk-log:
+
+  # internship-kafka:
+  #   container_name: 
+  #   image: 
+  #   hostname: kafka
+  #   ports:
+  #     - 
+  #     - 
+  #   depends_on:
+  #     - zookeeper
+  #   environment:
+  #     KAFKA_ZOOKEEPER_CONNECT: 
+  #     KAFKA_LISTENERS: INTERNAL:
+  #     KAFKA_ADVERTISED_LISTENERS: 
+  #     KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: 
+  #     KAFKA_INTER_BROKER_LISTENER_NAME: 
+  #     KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 
+  #     KAFKA_AUTO_CREATE_TOPICS_ENABLE: 
+  #   volumes:
+  #     - 
+
+volumes:
+  internship-pgdb:
+  # internship-zk-data:
+  # internship-zk-log:
+  # internship-kafka-data:
