@@ -11,19 +11,29 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@koa/cors": "3.3.0",
+    "@graphql-tools/merge": "^8.2.12",
+    "@graphql-tools/resolvers-composition": "^6.4.11",
+    "@graphql-tools/schema": "^8.3.12",
+    "@graphql-tools/utils": "^8.6.11",
+    "@koa/cors": "^3.3.0",
+    "apollo-server-core": "^3.7.0",
+    "apollo-server-koa": "^3.7.0",
+    "bcrypt": "^5.0.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
+    "jsonwebtoken": "^8.5.1",
     "koa": "2.13.4",
     "koa-parser": "^1.0.8",
     "koa-router": "^10.1.1",
-    "postgres": "^3.1.0",
-    "sequelize": "^6.19.0"
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "eslint": "8.13.0",
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-plugin-import": "2.26.0",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "nodemon": "2.0.15"
   }
 }

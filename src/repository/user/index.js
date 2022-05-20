@@ -1,4 +1,4 @@
-const { User } = require('../db/models');
+const userRepository = require('./user');
+const adminUserRepository = require('./adminUser');
 
-module.exports = {
-};
+module.exports = { userRepository, adminUserRepository };
