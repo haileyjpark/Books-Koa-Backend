@@ -1,5 +1,7 @@
 # About 
 ---
+- [프로젝트 ERD](https://dbdiagram.io/d/626034621072ae0b6abad4fa)
+- [API 문서](https://documenter.getpostman.com/view/20459763/UyxgJTME)
 
 ## Get Started
 ---
