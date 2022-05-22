@@ -2,10 +2,12 @@ const { userRepository, adminUserRepository } = require('../../repository/index'
 const { JwtService } = require('../../common/auth/index');
 const hashService = require('../../common/util/hashPassword');
 
+const EXPIRES_IN = process.env.JWT_ACCESS_EXPIRES_IN;
+
 // 유저 데이터 생성 (회원 가입)
 const findOrCreateUser = async (userData) => {
   try {
-    const [user, created] = (userData.userType === 'admin')
+    const [user, created] = (userData.userType === 'ADMIN')
       ? await adminUserRepository.findOrCreate(userData)
       : await userRepository.findOrCreate(userData);
     if (!created) {
@@ -18,19 +20,18 @@ const findOrCreateUser = async (userData) => {
 };
 
 // 로그인 로직
-const signInService = async (email, password, userType) => {
+const signInService = async (userData) => {
   try {
-    const user = (userType === 'admin')
-      ? await adminUserRepository.getByEmail(email)
-      : await userRepository.getByEmail(email);
-    if (!user) {
-      return 'User email doesn\'t exist';
-    }
+    const { email, password, userType } = userData;
+    const user = (userType === 'ADMIN')
+      ? await adminUserRepository.getOne({ email })
+      : await userRepository.getOne({ email });
+
     const matched = await hashService.comparePassword(password, user.password);
-    if (!matched) {
-      return 'invalid password';
+    if (!matched || !user) {
+      return 'Login failed';
     }
-    const Authorization = await JwtService.issue({ payload: { user: user.id } }, '1d');
+    const Authorization = await JwtService.issue({ payload: { user: user.id } }, EXPIRES_IN);
     return { Authorization };
   } catch (err) { throw new Error(err.message); }
 };

@@ -1,5 +1,8 @@
+const Sequelize = require('sequelize');
+
+const { Op } = Sequelize;
 const {
-  sequelize, Book, BookInfo,
+  sequelize, Book, BookInfo, Category,
 } = require('../../db/models');
 
 const createBookTransaction = async (bookData) => {
@@ -24,13 +27,21 @@ const createBookTransaction = async (bookData) => {
       },
       transaction,
     });
-    const newBook = Book.create({
+    const newBook = await Book.create({
       bookInfoId: newBookInfo.id,
       bookType: bookData.bookType,
       transaction,
     });
     await transaction.commit();
-    return newBook;
+    const newBookWithBookInfo = await Book.findByPk(newBook.id, {
+      include: {
+        model: BookInfo,
+        include: {
+          model: Category,
+        },
+      },
+    });
+    return newBookWithBookInfo;
   } catch (err) {
     await transaction.rollback();
     throw new Error(err.message);
@@ -49,14 +60,52 @@ const getById = async (bookId) => {
 
 const getBooks = async (data) => {
   const where = {};
-  if (data.bookInfoId) { where.bookInfoId = data.bookInfoId; }
-  if (data.rentalState) { where.rentalState = data.rentalState.value; }
+  let bookInfoWhere = {};
+  const {
+    offset, limit, title, category, author,
+  } = data;
+
+  if (data) {
+    if (data.bookInfoId) { where.bookInfoId = data.bookInfoId; }
+    if (data.rentalState) { where.rentalState = data.rentalState.value; }
+  }
+
+  if ((!title) && (!category) && (!author)) {
+    bookInfoWhere = {};
+  } else {
+    bookInfoWhere = {
+      [Op.or]: [
+        {
+          title: {
+            [Op.like]: `%${title}%`,
+          },
+        },
+        {
+          author: {
+            [Op.like]: `%${author}%`,
+          },
+        },
+        {
+          '$Category.categoryName$': {
+            [Op.like]: `%${category}%`,
+          },
+        },
+      ],
+    };
+  }
   try {
     return Book.findAll({
       where,
       include: {
         model: BookInfo,
+        where: bookInfoWhere,
+        include: [{
+          model: Category,
+          attributes: ['categoryName', 'parent'],
+        }],
       },
+      limit,
+      offset,
       order: [['createdAt', 'DESC']],
     });
   } catch (err) {

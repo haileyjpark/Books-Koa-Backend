@@ -25,22 +25,17 @@ const findOrCreate = async (userData) => {
   }
 };
 
-const getByEmail = async (email) => {
+const getOne = async (data) => {
+  const where = {};
+  if (data.email) { where.email = data.email; }
+  if (data.userId) { where.id = data.userId; }
   try {
-    return User.findOne({ where: { email } });
-  } catch (err) {
-    throw new Error(err.message);
-  }
-};
-
-const getById = async (userId) => {
-  try {
-    return User.findByPk(userId);
+    return User.findOne({ where });
   } catch (err) {
     throw new Error(err.message);
   }
 };
 
 module.exports = {
-  findOrCreate, getByEmail, getById,
+  findOrCreate, getOne,
 };

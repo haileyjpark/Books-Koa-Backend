@@ -21,8 +21,8 @@ rentalRouter.get('/reservations/user', userAdminAuthorized, reservationControlle
 rentalRouter.get('/reservation/:reservationId', userAdminAuthorized, reservationController.getSingleReservation);
 rentalRouter.delete('/reservation/:bookInfoId', userAdminAuthorized, reservationController.cancelReservation);
 
-rentalRouter.get('/old-reservations/admin', adminAuthorized, reservationController.getAdminOldReservations);
-rentalRouter.get('/old-reservations/user', userAdminAuthorized, reservationController.getUserOldReservations);
-rentalRouter.get('/old-reservation/:reservationId', userAdminAuthorized, reservationController.getSingleOldReservation);
+rentalRouter.get('/reservations/history/admin', adminAuthorized, reservationController.getAdminOldReservations);
+rentalRouter.get('/reservations/history/user', userAdminAuthorized, reservationController.getUserOldReservations);
+rentalRouter.get('/reservation/history/:reservationId', userAdminAuthorized, reservationController.getSingleOldReservation);
 
 module.exports = rentalRouter;

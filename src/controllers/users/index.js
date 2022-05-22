@@ -21,14 +21,14 @@ const signUp = async (ctx) => {
 // 로그인
 const signIn = async (ctx) => {
   try {
-    const { email, password, userType } = ctx.request.body;
+    const { email, password } = ctx.request.body;
     if (!email) {
       ctx.throw(400, 'please provide the email');
     }
     if (!password) {
       ctx.throw(400, 'please provide the password');
     }
-    const token = await userService.signInService(email, password, userType);
+    const token = await userService.signInService(ctx.request.body);
     ctx.body = token;
     ctx.status = 200;
   } catch (err) { ctx.throw(500, err); }

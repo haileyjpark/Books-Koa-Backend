@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 
-const SALT_ROUND = 10;
+const { SALT_ROUND } = process.env;
 
 // 비밀번호 암호화
 const hashPassword = async (password) => {

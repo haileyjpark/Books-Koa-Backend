@@ -17,20 +17,15 @@ const findOrCreate = async (userData) => {
   }
 };
 
-const getByEmail = async (email) => {
+const getOne = async (data) => {
+  const where = {};
+  if (data.email) { where.email = data.email; }
+  if (data.adminUserId) { where.id = data.adminUserId; }
   try {
-    return AdminUser.findOne({ where: { email } });
+    return AdminUser.findOne({ where });
   } catch (err) {
     throw new Error(err.message);
   }
 };
 
-const getById = (adminUserId) => {
-  try {
-    return AdminUser.findByPk(adminUserId);
-  } catch (err) {
-    throw new Error(err.message);
-  }
-};
-
-module.exports = { findOrCreate, getByEmail, getById };
+module.exports = { findOrCreate, getOne };

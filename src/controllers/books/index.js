@@ -39,7 +39,13 @@ const getBookById = async (ctx) => {
 // 도서 삭제 - 관리자
 const deleteBook = async (ctx) => {
   try {
-    ctx.body = await bookService.deleteBook(ctx.params.id);
+    const bookId = ctx.params.id;
+    const deletedBook = await bookService.deleteBook(bookId);
+    if (deletedBook) {
+      ctx.body = { message: `The book < ${bookId} > is successfully deleted.` };
+    } else {
+      ctx.body = { message: ` Failed to deleted the book <${bookId}>.` };
+    }
     ctx.status = 200;
   } catch (err) { ctx.throw(500, err); }
 };

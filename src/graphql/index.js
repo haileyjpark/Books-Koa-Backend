@@ -1,22 +1,17 @@
-const { mergeTypeDefs, mergeResolvers } = require('@graphql-tools/merge');
 const { makeExecutableSchema } = require('@graphql-tools/schema');
+const { authDirective } = require('./utils');
+
+const { authDirectiveTransformer } = authDirective('auth');
 
 const typeDefs = require('./schema');
-const { bookInfoSchema, bookSchema, linkSchema } = require('./schema');
-
-
 const resolvers = require('./resolvers');
 
-const mergeResolver = mergeResolvers(resolvers);
-const mergedReSolvers = Object.values(mergeResolver);
-
-const mergedTypeDefs = mergeTypeDefs(typeDefs.bookInfoSchema);
-
-// const schemas = () => mergeSchemas({
-//   schemas: [schema],
-//   resolvers: [resolvers],
-// });
+let schema = makeExecutableSchema({
+  typeDefs,
+  resolvers,
+});
+schema = authDirectiveTransformer(schema);
 
 module.exports = {
-  typeDefs, resolvers,
+  schema, typeDefs, resolvers,
 };

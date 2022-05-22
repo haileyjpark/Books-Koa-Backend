@@ -1,7 +1,12 @@
-const { gql } = require('apollo-server-koa');
-// const { mergeSchemas } require('graphql-tools');
+const { mergeTypeDefs } = require('@graphql-tools/merge');
 
-const bookSchema = require('./book');
-const bookInfoSchema = require('./bookInfo');
+const bookType = require('./book');
+const userType = require('./user');
+const rentalType = require('./rental');
+const returnType = require('./return');
+const reservationType = require('./reservation');
 
-module.exports = { bookSchema, bookInfoSchema };
+const types = [bookType, userType, rentalType, returnType, reservationType];
+const typeDefs = mergeTypeDefs(types);
+
+module.exports = typeDefs;

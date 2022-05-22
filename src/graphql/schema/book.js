@@ -4,16 +4,16 @@ module.exports = gql`
     type Book {
         id: ID!
         bookType: BookType!
-        rentalStatus: Boolean!
-        bookInfo: BookInfo!
+        rentalState: Boolean!
+        BookInfo: BookInfo!
+        createdAt: String!
+        updatedAt: String!
     }
-
     enum BookType {
         EBOOK
         PAPER_BOOK
         AUDIO_BOOK
     }
-
     type BookInfo {
         id: ID!
         ISBN: Int!
@@ -24,7 +24,7 @@ module.exports = gql`
         thumbnailImage: String
         pages: Int!
         description: String!
-        category: Category!
+        Category: Category!
     }
     
     type Category {
@@ -32,13 +32,31 @@ module.exports = gql`
         categoryName: String!
         parent: Category
     }
-
+    input createBookInput {
+        bookType: BookType!
+        ISBN: Int!
+        title: String!
+        author: String!
+        publisher: String!
+        publicationDate: String!
+        thumbnailImage: String
+        pages: Int!
+        description: String!
+        categoryId: Int!   
+    }
+    input bookQueryInput {
+        page: Int
+        limit: Int
+        title: String
+        author: String
+        category: String
+    }
     type Query {
         book(id: ID!): Book!
-        books: [Book!]
+        books(input: bookQueryInput): [Book!]! @auth(requires: ADMIN)
     }
-
     type Mutation {
-        createBook(bookType: BookType!, bookInfo: Int!): Book!
-      }
+        createBook(input: createBookInput): Book!
+        deleteBook(id: ID!): String!
+    }
     `;

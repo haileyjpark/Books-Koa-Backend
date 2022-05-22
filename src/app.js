@@ -3,14 +3,14 @@ const http = require('http');
 const Koa = require('koa');
 const bodyParser = require('koa-parser');
 
-const { ApolloServer, gql } = require('apollo-server-koa');
-const { ApolloServerPluginDrainHttpServer } = require('apollo-server-core');
-const typeDefs = require('./graphql/schema/bookInfo');
-// const { resolvers } = require('./graphql');
-const resolvers = require('./graphql/resolvers/bookInfo');
+const { ApolloServer } = require('apollo-server-koa');
+// const { ApolloServerPluginDrainHttpServer } = require('apollo-server-core');
+const { resolvers, typeDefs } = require('./graphql');
+const { schema } = require('./graphql');
 
-console.log('=================================================================================');
-console.log(resolvers);
+// console.log('resolvers', resolvers);
+// console.log('typeDefs', typeDefs);
+// console.log('schema', schema);
 
 const router = require('./routes');
 
@@ -34,16 +34,18 @@ module.exports = {
 
     const httpServer = http.createServer();
     const server = new ApolloServer({
-      typeDefs,
-      resolvers,
+      schema,
+      // typeDefs,
+      // resolvers,
       csrfPrevention: true,
-      plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
+      context: ({ ctx, next }) => ({ ctx, next }),
+      // plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
     });
 
     await server.start();
     server.applyMiddleware({ app });
     httpServer.on('request', app.callback());
-    await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
+    await new Promise((resolve) => httpServer.listen({ port: PORT }, resolve));
     console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
     return { server, app };
   },

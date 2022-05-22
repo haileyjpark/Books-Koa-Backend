@@ -7,7 +7,7 @@ const checkOverdue = async (userId) => {
   try {
     const userRental = await rentalRepository.getRentals({ userId });
     const today = new Date();
-    const user = await userRepository.getById(userId);
+    const user = await userRepository.getOne({ userId });
     const isOverdue = await userRental.some((singleRental) => singleRental.returnDueDate < today);
     // 유저 데이터의 대출 가능 날짜가 오늘 이후이거나, 유저가 현재 대출중인 대출 데이터에 연체된 책이 있다면 대출 불가
     if ((user.availableRentalDate > today) || (isOverdue)) {
