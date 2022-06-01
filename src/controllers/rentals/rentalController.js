@@ -13,14 +13,17 @@ const createRentals = async (ctx) => {
 
 // 대출 목록 조회 - 관리자페이지 (유저로 필터링 & 책 정보로 필터링)
 const getAdminRentals = async (ctx) => {
-  const page = parseInt(ctx.request.query.page, 10);
-  const limit = parseInt(ctx.request.query.limit, 10);
-  const { bookId, userId } = ctx.request.query;
+  const {
+    bookId, userId, page, limit,
+  } = ctx.request.query;
   try {
-    if ((!bookId || !userId) && (!page || !limit)) {
+    if (!page || !limit) {
       ctx.throw(400, 'you should provide page and limit');
     }
-    ctx.body = await rentalService.getRentals({ bookId, userId }, page, limit);
+    if (!bookId && !userId) {
+      ctx.throw(400, 'you should provide information');
+    }
+    ctx.body = await rentalService.getRentals({ bookId, userId }, Number(page), Number(limit));
     ctx.status = 200;
   } catch (err) { ctx.throw(500, err); }
 };
@@ -40,9 +43,9 @@ const getUserRentals = async (ctx) => {
 };
 
 // 단일 대출 조회
-const getSingleRental = async (ctx) => {
+const getOneRental = async (ctx) => {
   try {
-    ctx.body = await rentalService.getSingleRental(ctx.params.rentalId);
+    ctx.body = await rentalService.getOneRental(ctx.params.rentalId);
     ctx.status = 200;
   } catch (err) { ctx.throw(500, err); }
 };
@@ -73,36 +76,38 @@ const createBookReturns = async (ctx) => {
 
 // 반납 내역 목록 조회 - 관리자페이지 (유저로 필터링 & 책 정보로 필터링)
 const getAdminReturns = async (ctx) => {
-  const page = parseInt(ctx.request.query.page, 10);
-  const limit = parseInt(ctx.request.query.limit, 10);
-  const { bookId, userId } = ctx.request.query;
+  const {
+    bookId, userId, page, limit,
+  } = ctx.request.query;
   try {
-    if ((!bookId || !userId) && (!page || !limit)) {
+    if (!bookId && !userId) {
+      ctx.throw(400, 'please provide the information');
+    }
+    if (!page || !limit) {
       ctx.throw(400, 'you should provide page and limit');
     }
-    ctx.body = await rentalService.getBookReturns({ bookId, userId }, page, limit);
+    ctx.body = await rentalService.getBookReturns({ bookId, userId }, Number(page), Number(limit));
     ctx.status = 200;
   } catch (err) { ctx.throw(500, err); }
 };
 
 // 반납 내역 목록 조회 - 유저 마이페이지
 const getUserReturns = async (ctx) => {
-  const page = parseInt(ctx.request.query.page, 10);
-  const limit = parseInt(ctx.request.query.limit, 10);
+  const { page, limit } = ctx.request.query;
   const { userId } = ctx.state;
   try {
     if (!page || !limit) {
       ctx.throw(400, 'you should provide page and limit');
     }
-    ctx.body = await rentalService.getBookReturns({ userId }, page, limit);
+    ctx.body = await rentalService.getBookReturns({ userId }, Number(page), Number(limit));
     ctx.status = 200;
   } catch (err) { ctx.throw(500, err); }
 };
 
 // 단일 반납 조회
-const getSingleReturn = async (ctx) => {
+const getOneReturn = async (ctx) => {
   try {
-    ctx.body = await rentalService.getSingleReturn(ctx.params.rentalId);
+    ctx.body = await rentalService.getOneReturn(ctx.params.rentalId);
     ctx.status = 200;
   } catch (err) { ctx.throw(500, err); }
 };
@@ -111,10 +116,10 @@ module.exports = {
   createRentals,
   getAdminRentals,
   getUserRentals,
-  getSingleRental,
+  getOneRental,
   extendRental,
   createBookReturns,
   getAdminReturns,
   getUserReturns,
-  getSingleReturn,
+  getOneReturn,
 };

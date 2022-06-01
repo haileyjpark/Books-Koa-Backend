@@ -29,9 +29,9 @@ const getBooks = async (ctx) => {
 };
 
 // 도서 상세 페이지 조회 - 관리자 / 유저
-const getBookById = async (ctx) => {
+const getOneBook = async (ctx) => {
   try {
-    ctx.body = await bookService.getBookById(ctx.params.id);
+    ctx.body = await bookService.getOneBook(ctx.params.id);
     ctx.status = 200;
   } catch (err) { ctx.throw(500, err); }
 };
@@ -52,7 +52,7 @@ const deleteBook = async (ctx) => {
 };
 
 module.exports = {
-  createBook, getBooks, getBookById, deleteBook,
+  createBook, getBooks, getOneBook, deleteBook,
 };
 
 /*

@@ -5,9 +5,7 @@ const { ApolloServer } = require('apollo-server-koa');
 const router = require('./routes');
 const db = require('./db/models');
 
-// const { ApolloServerPluginDrainHttpServer } = require('apollo-server-core');
 const { resolvers, typeDefs } = require('./graphql');
-// const { schema } = require('./graphql');
 const loaders = require('./graphql/resolvers/loaders');
 
 const port = 4000;
@@ -34,7 +32,6 @@ const startServer = async () => {
       next,
       loaders,
     }),
-  // plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
   });
 
   await server.start();

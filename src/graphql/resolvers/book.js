@@ -2,7 +2,7 @@ const { graphqlBookController } = require('../controller');
 
 const bookResolver = {
   Query: {
-    getOneBook: graphqlBookController.getBookById,
+    getOneBook: graphqlBookController.getOneBook,
     getBookInfo: graphqlBookController.getBookInfo,
   },
   Mutation: {

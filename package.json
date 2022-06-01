@@ -20,6 +20,7 @@
     "apollo-server-koa": "^3.7.0",
     "bcrypt": "^5.0.1",
     "cross-env": "^7.0.3",
+    "dataloader": "^2.1.0",
     "dotenv": "^16.0.0",
     "jsonwebtoken": "^8.5.1",
     "koa": "2.13.4",

@@ -7,15 +7,16 @@ const {
 const createAvailableRentalDate = async (userId, returnDueDate, today) => {
   const user = await User.findByPk(userId);
   let newDate = '';
-  const dateDifference = (newDay, oldDay) => parseInt(Math.abs(newDay - oldDay) / (1000 * 3600 * 24), 10);
+  const dateDifference = (newDay, oldDay) => Number(Math.abs(newDay - oldDay) / (1000 * 3600 * 24));
   // 유저의 대출가능일이 오늘보다 이전일 경우 - 대출가능일을 오늘 + 연체일로 업데이트
   if (user.availableRentalDate < today) {
     const availableRentalDate = new Date(today);
     newDate = availableRentalDate.setDate(
       today.getDate() + dateDifference(today, returnDueDate),
     );
-    // 유저의 대출가능일이 오늘 이후일 경우 - 대출가능일을 대출가능일 + 연체일로 업데이트
-  } else if (user.availableRentalDate > today) {
+  }
+  // 유저의 대출가능일이 오늘 이후일 경우 - 대출가능일을 대출가능일 + 연체일로 업데이트
+  if (user.availableRentalDate > today) {
     const availableRentalDate = new Date(user.availableRentalDate);
     newDate = new Date(availableRentalDate.setDate(
       user.availableRentalDate.getDate() + dateDifference(today, returnDueDate),
@@ -76,26 +77,25 @@ const createReturnTransaction = async (rentalData) => {
 };
 
 const getOne = async (data) => {
-  try {
-    const where = {};
-    if (data.bookId) { where.bookId = data.bookId; }
-    if (data.userId) { where.userId = data.userId; }
-    if (data.rentalId) { where.rentalId = data.rentalId; }
+  const where = {};
+  if (data.bookId) { where.bookId = data.bookId; }
+  if (data.userId) { where.userId = data.userId; }
+  if (data.rentalId) { where.rentalId = data.rentalId; }
 
-    return BookReturn.findOne({ where });
-  } catch (err) { throw new Error(err.message); }
+  const bookReturn = await BookReturn.findOne({ where });
+  return bookReturn;
 };
 
-const getBookReturns = async (data, offset, limit) => {
+const getBookReturns = async (data, { offset, limit }) => {
   const where = {};
   if (data.userId) { where.userId = data.userId; }
-  try {
-    return BookReturn.findAll({
-      where, limit: limit || 10, offset: offset || 0, order: [['returnDate', 'DESC']],
-    });
-  } catch (err) {
-    throw new Error(err.message);
-  }
+  const bookReturns = await BookReturn.findAll({
+    where,
+    limit: limit || 10,
+    offset: offset || 0,
+    order: [['returnDate', 'DESC']],
+  });
+  return bookReturns;
 };
 
 module.exports = {

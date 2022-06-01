@@ -28,25 +28,25 @@ const getBooks = async (root, args, context) => {
   } catch (err) { return context.ctx.throw(500, err); }
 };
 
-const getBookById = async (root, args, context) => {
+const getOneBook = async (root, args, context) => {
   try {
     const id = Number(args.id);
-    const book = await graphqlBookService.getBookById(id);
+    const book = await graphqlBookService.getOneBook(id);
     context.ctx.status = 200;
     return book;
   } catch (err) { return context.ctx.throw(500, err); }
 };
 
 const getBookInfo = async (root, args, context) => {
-  const page = Number(args.input.page);
-  const limit = Number(args.input.limit);
-  const { title, author, category } = args.input;
+  const {
+    title, author, category, page, limit,
+  } = args.input;
   try {
     if (!page || !limit) {
       context.ctx.throw(400, 'you should provide page and limit');
     }
     const bookInfoList = await graphqlBookService.getBookInfo({
-      page, limit, author, category, title,
+      page: Number(page), limit: Number(limit), author, category, title,
     });
     context.ctx.status = 200;
     return bookInfoList;
@@ -67,5 +67,5 @@ const deleteBook = async (root, args, context) => {
 };
 
 module.exports = {
-  createBook, getBooks, deleteBook, getBookInfo, getBookById,
+  createBook, getBooks, deleteBook, getBookInfo, getOneBook,
 };
