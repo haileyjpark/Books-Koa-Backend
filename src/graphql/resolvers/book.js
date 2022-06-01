@@ -1,34 +1,31 @@
-const { bookService } = require('../../services');
+const { graphqlBookController } = require('../controller');
 
-module.exports = {
+const bookResolver = {
   Query: {
-    books: async (root, args, context) => {
-    // const books = await bookController.getBooks();
-    //   console.log('================================================');
-    //   console.log(context.ctx.req.headers.authorization);
-      const books = bookService.getBooks(args.input);
-      return books;
-    },
-    book: async (root, args, context) => {
-      const id = Number(args.id);
-      const singleBook = await bookService.getBookById(id);
-      return singleBook;
-    },
+    getOneBook: graphqlBookController.getBookById,
+    getBookInfo: graphqlBookController.getBookInfo,
   },
   Mutation: {
-    createBook: async (root, args, context) => {
-      // const books = await bookController.getBooks();
-      const book = await bookService.createBook(args.input);
-      return book;
+    createBook: graphqlBookController.createBook,
+    deleteBook: graphqlBookController.deleteBook,
+  },
+
+  BookInfo: {
+    books: async (parent, _, context) => {
+      const bookList = await context.loaders.bookLoader.load(parent.id);
+      return bookList;
     },
-    deleteBook: async (root, args, context) => {
-      // const books = await bookController.getBooks();
-      const id = Number(args.id);
-      const book = await bookService.deleteBook(id);
-      if (book) {
-        return `The book < ${id} > is successfully deleted.`;
-      }
-      return ` Failed to deleted the book <${id}>.`;
+    category: async (parent, _, context) => {
+      const categoryList = await context.loaders.categoryLoader.load(parent.categoryId);
+      return categoryList;
+    },
+  },
+  Book: {
+    bookInfo: async (parent, _, context) => {
+      const bookInfoList = context.loaders.bookInfoLoader.load(parent.bookInfoId);
+      return bookInfoList;
     },
   },
 };
+
+module.exports = { bookResolver };

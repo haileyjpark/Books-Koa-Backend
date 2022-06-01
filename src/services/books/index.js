@@ -3,11 +3,23 @@ const { bookRepository } = require('../../repository');
 // 도서 데이터 생성
 const createBook = async (bookData) => {
   try {
-    const newBook = bookRepository.createBookTransaction(bookData);
-    return newBook;
+    const newBook = await bookRepository.createBookTransaction(bookData);
+    const newBookWithBookInfo = await bookRepository.getBookWithBookInfoById(newBook.id);
+    return newBookWithBookInfo;
   } catch (err) {
     return err.message;
   }
+};
+
+const pagination = (page, limit) => {
+  let offset = 0;
+  let newPage = page;
+  if (newPage <= 0) {
+    newPage = 1;
+  } else {
+    offset = (newPage - 1) * limit;
+  }
+  return { offset, limit };
 };
 
 // 도서 목록 조회
@@ -16,17 +28,10 @@ const getBooks = async (data) => {
     page, limit, title, author, category,
   } = data;
   try {
-    let offset = 0;
-    let newPage = page;
-    if (newPage <= 0) {
-      newPage = 1;
-    } else {
-      offset = (newPage - 1) * limit;
-    }
-    const queryData = {
-      offset, limit, title, author, category,
-    };
-    const BookList = await bookRepository.getBooks(queryData);
+    const paginationData = pagination(page, limit);
+    const BookList = await bookRepository.getBooksWithBookInfo({
+      offset: paginationData.offset, limit: paginationData.limit, title, author, category,
+    });
     return BookList;
   } catch (err) { return err.message; }
 };

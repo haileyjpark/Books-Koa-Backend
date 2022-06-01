@@ -20,7 +20,6 @@ module.exports = gql`
         reservationEndDate: String!
         state: state!
     }
-
     enum state {
         RENTED
         CANCELLED

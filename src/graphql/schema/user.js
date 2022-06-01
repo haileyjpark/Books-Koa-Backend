@@ -22,6 +22,7 @@ module.exports = gql`
         createdAt: String!
         updatedAt: String!
     }
+
     enum userType {
         ADMIN
         USER
@@ -34,14 +35,17 @@ module.exports = gql`
         phoneNumber: String!
         userType: userType!
     }
+
     input signInInput {
         email: String!
         password: String!
         userType: userType! 
     }
+
     type Token {
         Authorization: String!
     }
+
     type Mutation {
         signUp(input: createUserInput): String!
         signIn(input: signInInput): Token!

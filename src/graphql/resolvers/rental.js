@@ -1,4 +1,5 @@
 const { rentalService } = require('../../services');
+const { graphqlRentalController } = require('../controller');
 
 module.exports = {
   Query: {
@@ -13,10 +14,7 @@ module.exports = {
     },
   },
   Mutation: {
-    createRentals: async (root, args, context) => {
-      const rentals = await rentalService.createRentals(args.input);
-      return rentals;
-    },
+    createRentals: graphqlRentalController.createRentals,
     extendRental: async (root, args, context) => {
       const id = Number(args.id);
       const book = await rentalService.extendRental(id);

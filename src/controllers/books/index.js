@@ -13,8 +13,8 @@ const createBook = async (ctx) => {
 
 // 도서 목록 조회 - 관리자 / 유저
 const getBooks = async (ctx) => {
-  const page = parseInt(ctx.request.query.page, 10);
-  const limit = parseInt(ctx.request.query.limit, 10);
+  const page = Number(ctx.request.query.page);
+  const limit = Number(ctx.request.query.limit);
   const { title, author, category } = ctx.request.query;
   const bookInfoData = {
     page, limit, author, category, title,
@@ -43,10 +43,11 @@ const deleteBook = async (ctx) => {
     const deletedBook = await bookService.deleteBook(bookId);
     if (deletedBook) {
       ctx.body = { message: `The book < ${bookId} > is successfully deleted.` };
+      ctx.status = 200;
     } else {
       ctx.body = { message: ` Failed to deleted the book <${bookId}>.` };
+      ctx.status = 204;
     }
-    ctx.status = 200;
   } catch (err) { ctx.throw(500, err); }
 };
 

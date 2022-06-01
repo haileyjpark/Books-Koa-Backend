@@ -30,39 +30,41 @@ const createBookTransaction = async (bookData) => {
     const newBook = await Book.create({
       bookInfoId: newBookInfo.id,
       bookType: bookData.bookType,
-      transaction,
-    });
+    }, { transaction });
     await transaction.commit();
-    const newBookWithBookInfo = await Book.findByPk(newBook.id, {
-      include: {
-        model: BookInfo,
-        include: {
-          model: Category,
-        },
-      },
-    });
-    return newBookWithBookInfo;
+    return newBook;
   } catch (err) {
     await transaction.rollback();
     throw new Error(err.message);
   }
 };
 
-const getById = async (bookId) => {
+const getBookWithBookInfoById = async (bookId) => {
   try {
     return Book.findByPk(bookId, {
       include: {
         model: BookInfo,
+        include: [{
+          model: Category,
+          attributes: ['categoryName', 'parent'],
+        }],
       },
     });
   } catch (err) { throw new Error(err.message); }
 };
 
-const getBooks = async (data) => {
+const getBookById = async (bookId) => {
+  try {
+    const book = await Book.findByPk(bookId);
+    return book;
+  } catch (err) { throw new Error(err.message); }
+};
+
+const bookQuery = (data) => {
   const where = {};
   let bookInfoWhere = {};
   const {
-    offset, limit, title, category, author,
+    title, category, author,
   } = data;
 
   if (data) {
@@ -93,6 +95,15 @@ const getBooks = async (data) => {
       ],
     };
   }
+  return { where, bookInfoWhere };
+};
+
+const getBooksWithBookInfo = async (data) => {
+  const { where } = bookQuery(data);
+  const { bookInfoWhere } = bookQuery(data);
+  const {
+    limit, offset,
+  } = data;
   try {
     return Book.findAll({
       where,
@@ -113,6 +124,42 @@ const getBooks = async (data) => {
   }
 };
 
+const getBooks = async (data) => {
+  const { where } = bookQuery(data);
+  const {
+    limit, offset,
+  } = data;
+  try {
+    const books = await Book.findAll({
+      where,
+      limit,
+      offset,
+      order: [['createdAt', 'DESC']],
+    });
+    return books;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+};
+
+const getBookInfo = async (data) => {
+  const { where } = bookQuery(data);
+  const {
+    limit, offset,
+  } = data;
+  try {
+    const bookInfos = await BookInfo.findAll({
+      where,
+      limit,
+      offset,
+      order: [['publicationDate', 'DESC']],
+    });
+    return bookInfos;
+  } catch (err) {
+    throw new Error(err.message);
+  }
+};
+
 const destroy = async (bookId) => {
   try {
     return Book.destroy({ where: { id: bookId }, truncate: false });
@@ -120,5 +167,11 @@ const destroy = async (bookId) => {
 };
 
 module.exports = {
-  createBookTransaction, getBooks, getById, destroy,
+  createBookTransaction,
+  getBooks,
+  getBooksWithBookInfo,
+  getBookWithBookInfoById,
+  getBookById,
+  getBookInfo,
+  destroy,
 };

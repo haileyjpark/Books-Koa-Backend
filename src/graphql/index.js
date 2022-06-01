@@ -1,16 +1,17 @@
 const { makeExecutableSchema } = require('@graphql-tools/schema');
-const { authDirective } = require('./utils');
+// const { authDirective } = require('./utils');
 
-const { authDirectiveTransformer } = authDirective('auth');
+// const { authDirectiveTransformer } = authDirective('auth');
 
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
 
-let schema = makeExecutableSchema({
+const schema = makeExecutableSchema({
   typeDefs,
   resolvers,
 });
-schema = authDirectiveTransformer(schema);
+
+// schema = authDirectiveTransformer(schema);
 
 module.exports = {
   schema, typeDefs, resolvers,
