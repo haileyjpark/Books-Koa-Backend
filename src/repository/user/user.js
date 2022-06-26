@@ -25,6 +25,12 @@ const findOrCreate = async (userData) => {
   }
 };
 
+const updateRefreshToken = async (data) => {
+  const { userId, refreshToken } = data;
+  const updateToken = await User.update({ refreshToken }, { where: { id: userId } });
+  return updateToken;
+};
+
 const getOne = async (data) => {
   const where = {};
   if (data.email) { where.email = data.email; }
@@ -37,5 +43,5 @@ const getOne = async (data) => {
 };
 
 module.exports = {
-  findOrCreate, getOne,
+  findOrCreate, updateRefreshToken, getOne,
 };

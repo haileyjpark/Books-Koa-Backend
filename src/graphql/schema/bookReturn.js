@@ -2,7 +2,7 @@ const { gql } = require('apollo-server-koa');
 
 module.exports = gql`
     type BookReturn {
-        id: ID!
+        id: Int!
         rentalCode: String!
         book: Book!
         user: User!
@@ -24,12 +24,12 @@ module.exports = gql`
     }
 
     type Query {
-        getOneReturn(id: ID!): BookReturn!
+        getOneReturn(id: Int!): BookReturn!
         getAdminReturns(input: bookReturnQueryInput): [BookReturn!]!
         getUserReturns(input: bookReturnQueryInput): [BookReturn!]!
     }
 
     type Mutation {
-        createBookReturns(input: createBookReturnInput): [BookReturn]!
+        createBookReturn(input: createBookReturnInput): BookReturn!
     }
     `;

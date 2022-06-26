@@ -1,7 +1,11 @@
 const JwtService = require('./jwtService');
-const userAuthorized = require('./authMiddleware');
+const { userAdminAuthorized, adminAuthorized } = require('./restApiAuth');
+const { graphqlUserAdminAuthorized, graphqlAdminAuthorized } = require('./graphqlAuth');
 
 module.exports = {
   JwtService,
-  userAuthorized,
+  userAdminAuthorized,
+  adminAuthorized,
+  graphqlUserAdminAuthorized,
+  graphqlAdminAuthorized,
 };

@@ -2,7 +2,7 @@ const { gql } = require('apollo-server-koa');
 
 module.exports = gql`
     type Rental {
-        id: ID!
+        id: Int!
         rentalCode: String!
         book: Book!
         user: User!
@@ -30,13 +30,13 @@ module.exports = gql`
     }
 
     type Query {
-        getOneRental(id: ID!): Rental!
+        getOneRental(id: Int!): Rental!
         getAdminRentals(input: rentalQueryInput): [Rental!]!
         getUserRentals(input: rentalQueryInput): [Rental!]!
     }
 
     type Mutation {
-        createRentals(input: createRentalInput): [Rental]!
-        extendRental(input:extendRentalInput): String!
+        createRental(input: createRentalInput): Rental!
+        extendRental(input: extendRentalInput): String!
     }
     `;

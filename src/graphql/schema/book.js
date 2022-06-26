@@ -2,7 +2,7 @@ const { gql } = require('apollo-server-koa');
 
 module.exports = gql`
     type Book {
-        id: ID!
+        id: Int!
         bookType: BookType!
         rentalState: Boolean!
         createdAt: String!
@@ -17,7 +17,7 @@ module.exports = gql`
     }
 
     type BookInfo {
-        id: ID!
+        id: Int!
         ISBN: Int!
         title: String!
         author: String!
@@ -31,7 +31,7 @@ module.exports = gql`
         }
     
     type Category {
-        id: ID!
+        id: Int!
         categoryName: String!
         parent: Category
         bookInfo: [BookInfo!]
@@ -55,16 +55,15 @@ module.exports = gql`
         limit: Int
         title: String
         author: String
-        category: String
     }
 
     type Query {
-        getOneBook(id: ID!): Book!
-        getBookInfo(input: bookQueryInput): [BookInfo!]!
+        getOneBook(id: Int!): Book!
+        getBookInfoList(input: bookQueryInput): [BookInfo!]!
     }
 
     type Mutation {
         createBook(input: createBookInput): Book!
-        deleteBook(id: ID!): String!
+        deleteBook(id: Int!): String!
     }
     `;

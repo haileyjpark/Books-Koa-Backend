@@ -1,13 +1,15 @@
-const { graphqlRentalController } = require('../../controller');
+const { composeResolvers } = require('@graphql-tools/resolvers-composition');
+const { graphqlRentalController } = require('../../../controllers/graphql');
+const { graphqlUserAdminAuthorized, graphqlAdminAuthorized } = require('../../../common/auth');
 
-const bookReturnResolver = {
+const resolvers = {
   Query: {
     getOneReturn: graphqlRentalController.getOneReturn,
     getAdminReturns: graphqlRentalController.getAdminReturns,
     getUserReturns: graphqlRentalController.getUserReturns,
   },
   Mutation: {
-    createBookReturns: graphqlRentalController.createBookReturns,
+    createBookReturn: graphqlRentalController.createBookReturn,
   },
   BookReturn: {
     book: async (parent, _, context) => {
@@ -20,5 +22,15 @@ const bookReturnResolver = {
     },
   },
 };
+
+const resolversComposition = {
+  'Query.getAdminReturns': [graphqlAdminAuthorized()],
+  'Mutation.createBookReturn': [graphqlAdminAuthorized()],
+
+  'Query.getOneReturn': [graphqlUserAdminAuthorized()],
+  'Query.getUserReturns': [graphqlUserAdminAuthorized()],
+};
+
+const bookReturnResolver = composeResolvers(resolvers, resolversComposition);
 
 module.exports = { bookReturnResolver };

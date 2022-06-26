@@ -42,6 +42,11 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: DataTypes.NOW,
       comment: '대출 가능한 날짜 정보를 담고 있습니다. 반납이 연체되지 않았을 경우 반납일로 지정됩니다.',
     },
+    refreshToken: {
+      type: DataTypes.STRING(200),
+      allowNull: true,
+      comment: '리프레시 토큰을 저장합니다.',
+    },
   });
   User.associate = (models) => {
     User.hasMany(models.BookRental, {

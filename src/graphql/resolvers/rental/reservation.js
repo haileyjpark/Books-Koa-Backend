@@ -1,6 +1,8 @@
-const { graphqlReservationController } = require('../../controller');
+const { composeResolvers } = require('@graphql-tools/resolvers-composition');
+const { graphqlReservationController } = require('../../../controllers/graphql');
+const { graphqlUserAdminAuthorized, graphqlAdminAuthorized } = require('../../../common/auth');
 
-const bookReservationResolver = {
+const resolvers = {
   Query: {
     getOneReservation: graphqlReservationController.getOneReservation,
     getAdminReservations: graphqlReservationController.getAdminReservations,
@@ -14,9 +16,9 @@ const bookReservationResolver = {
     cancelReservation: graphqlReservationController.cancelReservation,
   },
   Reservation: {
-    book: async (parent, _, context) => {
-      const book = context.loaders.bookByIdLoader.load(parent.bookId);
-      return book;
+    bookInfo: async (parent, _, context) => {
+      const bookInfo = context.loaders.bookInfoLoader.load(parent.bookInfoId);
+      return bookInfo;
     },
     user: async (parent, _, context) => {
       const user = context.loaders.userByIdLoader.load(parent.userId);
@@ -24,9 +26,9 @@ const bookReservationResolver = {
     },
   },
   DeactivatedReservation: {
-    book: async (parent, _, context) => {
-      const book = context.loaders.bookByIdLoader.load(parent.bookId);
-      return book;
+    bookInfo: async (parent, _, context) => {
+      const bookInfo = context.loaders.bookInfoLoader.load(parent.bookInfoId);
+      return bookInfo;
     },
     user: async (parent, _, context) => {
       const user = context.loaders.userByIdLoader.load(parent.userId);
@@ -34,5 +36,19 @@ const bookReservationResolver = {
     },
   },
 };
+
+const resolversComposition = {
+  'Query.getAdminReservations': [graphqlAdminAuthorized()],
+  'Query.getAdminOldReservations': [graphqlAdminAuthorized()],
+
+  'Query.getOneReservation': [graphqlUserAdminAuthorized()],
+  'Query.getUserReservations': [graphqlUserAdminAuthorized()],
+  'Query.getOneOldReservation': [graphqlUserAdminAuthorized()],
+  'Query.getUserOldReservations': [graphqlUserAdminAuthorized()],
+  'Mutation.createReservation': [graphqlUserAdminAuthorized()],
+  'Mutation.cancelReservation': [graphqlUserAdminAuthorized()],
+};
+
+const bookReservationResolver = composeResolvers(resolvers, resolversComposition);
 
 module.exports = { bookReservationResolver };

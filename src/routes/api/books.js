@@ -1,6 +1,6 @@
 const Router = require('koa-router');
-const { bookController } = require('../../controllers');
-const { adminAuthorized } = require('../../common/auth/authMiddleware');
+const { bookController } = require('../../controllers/restApi');
+const { adminAuthorized } = require('../../common/auth');
 
 const bookRouter = new Router();
 

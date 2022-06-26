@@ -2,13 +2,12 @@ const {
   sequelize, BookRental, Book, Reservation,
 } = require('../../db/models');
 
-const createRentalTransaction = async (rentalData) => {
+const createRentalTransaction = async (data) => {
   const {
     rentalCode, userId, bookId, returnDueDate,
-  } = rentalData;
+  } = data;
 
   const book = await Book.findByPk(bookId);
-
   const reservation = await Reservation.findOne({
     where: {
       userId,
@@ -47,15 +46,28 @@ const createRentalTransaction = async (rentalData) => {
   }
 };
 
-const getRentals = async (data, { offset, limit }) => {
+const getRentals = async (data) => {
   const where = {};
   if (data.userId) { where.userId = data.userId; }
+  if (data.bookId) { where.bookId = data.bookId; }
 
   const bookRentals = await BookRental.findAll({
     where,
-    limit: limit || 10,
-    offset,
+    limit: data?.limit || 10,
+    offset: data?.offset || 0,
     order: [['createdAt', 'DESC']],
+  });
+  return bookRentals;
+};
+
+const getRentalsByBookInfo = async (bookInfoId) => {
+  const bookRentals = await BookRental.findAll({
+    include: {
+      model: Book,
+      where: { bookInfoId },
+      order: [['createdAt', 'DESC']],
+    },
+
   });
   return bookRentals;
 };
@@ -106,5 +118,5 @@ const extendRental = async ({ rentalId, returnDueDate }) => {
 };
 
 module.exports = {
-  getRentals, getOne, getOneWithBook, extendRental, createRentalTransaction,
+  getRentals, getRentalsByBookInfo, getOne, getOneWithBook, extendRental, createRentalTransaction,
 };

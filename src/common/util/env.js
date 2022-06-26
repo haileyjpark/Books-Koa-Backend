@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 
 const envFiles = {
   development: '.env.dev',
-  test: 'test.env',
+  test: '.env.test',
   production: '.env',
 };
 

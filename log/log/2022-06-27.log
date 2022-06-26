@@ -1,0 +1,730 @@
+ 2022-06-27 01:06:25 || [ [31merror[39m ] ▶ [31muncaughtException: middleware must be a function![39m
+[31mTypeError: middleware must be a function![39m
+[31m    at Application.use (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/koa/lib/application.js:123:41)[39m
+[31m    at Object.startServer (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js:18:7)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/index.js:4:8)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)[39m
+[31m    at node:internal/main/run_main_module:17:47[39m
+ 2022-06-27 01:06:65 || [ [31merror[39m ] ▶ [31mError message from the centralized error-handling component column "refreshToken" does not exist[39m
+ 2022-06-27 01:06:66 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component column "refreshToken" does not exist[39m
+ 2022-06-27 01:06:37 || [ [31merror[39m ] ▶ [31mError message from the centralized error-handling component column "refreshToken" does not exist[39m
+ 2022-06-27 01:06:37 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component column "refreshToken" does not exist[39m
+ 2022-06-27 01:06:57 || [ [31merror[39m ] ▶ [31mError message from the centralized error-handling component CustomError is not a constructor[39m
+ 2022-06-27 01:06:57 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component CustomError is not a constructor[39m
+ 2022-06-27 01:06:41 || [ [31merror[39m ] ▶ [31mError message from the centralized error-handling component The email provided is already exists[39m
+ 2022-06-27 01:06:41 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component The email provided is already exists[39m
+ 2022-06-27 01:06:39 || [ [31merror[39m ] ▶ [31mError message from the centralized error-handling component The email provided is already exists[39m
+ 2022-06-27 01:06:39 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component The email provided is already exists[39m
+ 2022-06-27 01:06:78 || [ [31merror[39m ] ▶ [31muncaughtException: Unexpected token '['[39m
+[31m/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/error/customError.js:15[39m
+[31m    this.statusCode = ERROR_CODE_STATUS_MAPPING.[errorCode];[39m
+[31m                                                ^[39m
+
+[31mSyntaxError: Unexpected token '['[39m
+[31m    at Object.compileFunction (node:vm:352:18)[39m
+[31m    at wrapSafe (node:internal/modules/cjs/loader:1027:15)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1063:27)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/error/index.js:2:25)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 01:06:80 || [ [31merror[39m ] ▶ [31mError message from the centralized error-handling component ERROR_CODE_STATUS_MAPPING.get is not a function[39m
+ 2022-06-27 01:06:80 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component ERROR_CODE_STATUS_MAPPING.get is not a function[39m
+ 2022-06-27 01:06:71 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component The email provided is already exists[39m
+ 2022-06-27 01:06:14 || [ [31merror[39m ] ▶ [31muncaughtException: Missing initializer in destructuring declaration[39m
+[31m/Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/controller/user.js:2[39m
+[31mconst {}[39m
+[31m      ^^[39m
+
+[31mSyntaxError: Missing initializer in destructuring declaration[39m
+[31m    at Object.compileFunction (node:vm:352:18)[39m
+[31m    at wrapSafe (node:internal/modules/cjs/loader:1027:15)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1063:27)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/controller/index.js:2:31)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 01:06:64 || [ [31merror[39m ] ▶ [31muncaughtException: Unexpected token ':'[39m
+[31m/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/error/customError.js:20[39m
+[31m  constructor(errorCode: string, message: string) {[39m
+[31m                       ^[39m
+
+[31mSyntaxError: Unexpected token ':'[39m
+[31m    at Object.compileFunction (node:vm:352:18)[39m
+[31m    at wrapSafe (node:internal/modules/cjs/loader:1027:15)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1063:27)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/error/index.js:2:41)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 01:06:43 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component next is not a function[39m
+ 2022-06-27 01:06:65 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component next is not a function[39m
+ 2022-06-27 02:06:92 || [ [31merror[39m ] ▶ [31muncaughtException: Unexpected identifier[39m
+[31m/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/error/customError.js:21[39m
+[31m  extensions: GraphQLErrorExtensions;[39m
+[31m  [39m
+
+[31mSyntaxError: Unexpected identifier[39m
+[31m    at Object.compileFunction (node:vm:352:18)[39m
+[31m    at wrapSafe (node:internal/modules/cjs/loader:1027:15)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1063:27)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/error/errorHandler.js:2:28)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 02:06:61 || [ [31merror[39m ] ▶ [31muncaughtException: errorHandlerGraphQL is not defined[39m
+[31mReferenceError: errorHandlerGraphQL is not defined[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/error/errorHandler.js:26:34)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/error/index.js:1:47)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+ 2022-06-27 03:06:71 || [ [31merror[39m ] ▶ [31muncaughtException: setHttpPlugin is not defined[39m
+[31mReferenceError: setHttpPlugin is not defined[39m
+[31m    at Object.startServer (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js:41:15)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/index.js:4:8)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)[39m
+[31m    at node:internal/main/run_main_module:17:47[39m
+ 2022-06-27 03:06:14 || [ [31merror[39m ] ▶ [31muncaughtException: setHttpPlugin is not defined[39m
+[31mReferenceError: setHttpPlugin is not defined[39m
+[31m    at Object.startServer (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js:41:15)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/index.js:4:8)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)[39m
+[31m    at node:internal/main/run_main_module:17:47[39m
+ 2022-06-27 03:06:11 || [ [31merror[39m ] ▶ [31muncaughtException: setHttpPlugin is not defined[39m
+[31mReferenceError: setHttpPlugin is not defined[39m
+[31m    at Object.startServer (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js:41:15)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/index.js:4:8)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)[39m
+[31m    at node:internal/main/run_main_module:17:47[39m
+ 2022-06-27 03:06:42 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot use 'in' operator to search for '__internal_plugin_id__' in undefined[39m
+[31mTypeError: Cannot use 'in' operator to search for '__internal_plugin_id__' in undefined[39m
+[31m    at pluginIsInternal (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/internalPlugin.js:5:37)[39m
+[31m    at /Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:451:120[39m
+[31m    at Array.some (<anonymous>)[39m
+[31m    at alreadyHavePluginWithInternalId (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:451:70)[39m
+[31m    at ApolloServer.ensurePluginInstantiation (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:453:18)[39m
+[31m    at new ApolloServerBase (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:149:14)[39m
+[31m    at new ApolloServer (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-koa/dist/ApolloServer.js:21:1)[39m
+[31m    at Object.startServer (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js:31:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/index.js:4:8)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 03:06:93 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot use 'in' operator to search for '__internal_plugin_id__' in undefined[39m
+[31mTypeError: Cannot use 'in' operator to search for '__internal_plugin_id__' in undefined[39m
+[31m    at pluginIsInternal (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/internalPlugin.js:5:37)[39m
+[31m    at /Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:451:120[39m
+[31m    at Array.some (<anonymous>)[39m
+[31m    at alreadyHavePluginWithInternalId (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:451:70)[39m
+[31m    at ApolloServer.ensurePluginInstantiation (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:453:18)[39m
+[31m    at new ApolloServerBase (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:149:14)[39m
+[31m    at new ApolloServer (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-koa/dist/ApolloServer.js:21:1)[39m
+[31m    at Object.startServer (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js:31:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/index.js:4:8)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 03:06:68 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot use 'in' operator to search for '__internal_plugin_id__' in undefined[39m
+[31mTypeError: Cannot use 'in' operator to search for '__internal_plugin_id__' in undefined[39m
+[31m    at pluginIsInternal (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/internalPlugin.js:5:37)[39m
+[31m    at /Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:451:120[39m
+[31m    at Array.some (<anonymous>)[39m
+[31m    at alreadyHavePluginWithInternalId (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:451:70)[39m
+[31m    at ApolloServer.ensurePluginInstantiation (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:453:18)[39m
+[31m    at new ApolloServerBase (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-core/dist/ApolloServer.js:149:14)[39m
+[31m    at new ApolloServer (/Users/haileyjpark/internship/backend/junghyun/koa-books/node_modules/apollo-server-koa/dist/ApolloServer.js:21:1)[39m
+[31m    at Object.startServer (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js:31:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/index.js:4:8)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 03:06:09 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot find module './users'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/user.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31mError: Cannot find module './users'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/user.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31m    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:778:27)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/index.js:2:24)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+ 2022-06-27 03:06:24 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot find module './users'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/user.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31mError: Cannot find module './users'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/user.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31m    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:778:27)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/index.js:2:24)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+ 2022-06-27 03:06:89 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/users/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/user.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31mError: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/users/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/user.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31m    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:778:27)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/users/index.js:1:38)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+ 2022-06-27 03:06:67 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/users/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/user.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31mError: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/users/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/user.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31m    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:778:27)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/users/index.js:1:38)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+ 2022-06-27 03:06:77 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/users/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/user.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31mError: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/users/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/user.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/api/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/routes/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31m    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:778:27)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/restApi/users/index.js:1:38)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+ 2022-06-27 03:06:38 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/book/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/book/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31mError: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/book/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/book/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31m    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:778:27)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/book/index.js:1:25)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+ 2022-06-27 03:06:24 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/book/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31mError: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/book/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31m    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:778:27)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js:1:38)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+ 2022-06-27 03:06:68 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/book/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31mError: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/book/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31m    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:778:27)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js:1:38)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+ 2022-06-27 03:06:58 || [ [31merror[39m ] ▶ [31muncaughtException: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/book/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31mError: Cannot find module '../../../restApi'[39m
+[31mRequire stack:[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/book/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/resolvers/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/graphql/index.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/src/server.js[39m
+[31m- /Users/haileyjpark/internship/backend/junghyun/koa-books/index.js[39m
+[31m    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:778:27)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js:1:38)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+ 2022-06-27 04:06:62 || [ [31merror[39m ] ▶ [31muncaughtException: Unexpected token ')'[39m
+[31m/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js:15[39m
+[31m    console.log(err.name==='CustomError'));[39m
+[31m                                         ^[39m
+
+[31mSyntaxError: Unexpected token ')'[39m
+[31m    at Object.compileFunction (node:vm:352:18)[39m
+[31m    at wrapSafe (node:internal/modules/cjs/loader:1027:15)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1063:27)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/index.js:2:31)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 04:06:05 || [ [31merror[39m ] ▶ [31muncaughtException: Unexpected token 'throw'[39m
+[31m/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/user/index.js:17[39m
+[31m    throw new CustomGQLError(ERROR_CODE.INVALID_INPUT, 'Signup failed');[39m
+[31m    ^^^^^[39m
+
+[31mSyntaxError: Unexpected token 'throw'[39m
+[31m    at Object.compileFunction (node:vm:352:18)[39m
+[31m    at wrapSafe (node:internal/modules/cjs/loader:1027:15)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1063:27)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/controllers/graphql/index.js:2:31)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 04:06:21 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component The email provided is already exists[39m
+ 2022-06-27 04:06:22 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component The email provided is already exists[39m
+ 2022-06-27 04:06:47 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component The email provided is already exists[39m
+ 2022-06-27 04:06:67 || [ [32minfo[39m ] ▶ [32mError message from the centralized error-handling component The email provided is already exists[39m
+ 2022-06-27 04:06:32 || [ [32minfo[39m ] ▶ [32m[restAPI/services/signIn/INVALID_INPUT] The email provided is already exists[39m
+ 2022-06-27 04:06:06 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:06 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:04 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:05 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:04 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:07 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:07 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32m[Check the error stack] Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:05 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:03 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 04:06:02 || [ [32minfo[39m ] ▶ [32mundefined Cannot read properties of undefined (reading '0')[39m
+ 2022-06-27 05:06:12 || [ [31merror[39m ] ▶ [31muncaughtException: Unexpected token ')'[39m
+[31m/Users/haileyjpark/internship/backend/junghyun/koa-books/src/services/graphql/book/index.js:13[39m
+[31m    throw new CustomGQLError(ERROR_CODE.)[39m
+[31m                                        ^[39m
+
+[31mSyntaxError: Unexpected token ')'[39m
+[31m    at Object.compileFunction (node:vm:352:18)[39m
+[31m    at wrapSafe (node:internal/modules/cjs/loader:1027:15)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1063:27)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/services/graphql/index.js:1:28)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 05:06:91 || [ [31merror[39m ] ▶ [31muncaughtException: Unexpected token ')'[39m
+[31m/Users/haileyjpark/internship/backend/junghyun/koa-books/src/services/graphql/book/index.js:13[39m
+[31m    throw new CustomGQLError(ERROR_CODE.)[39m
+[31m                                        ^[39m
+
+[31mSyntaxError: Unexpected token ')'[39m
+[31m    at Object.compileFunction (node:vm:352:18)[39m
+[31m    at wrapSafe (node:internal/modules/cjs/loader:1027:15)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1063:27)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/services/graphql/index.js:1:28)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+ 2022-06-27 05:06:85 || [ [31merror[39m ] ▶ [31muncaughtException: graphqlErrorExecutor is not defined[39m
+[31mReferenceError: graphqlErrorExecutor is not defined[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/error/index.js:6:38)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/auth/jwtService.js:3:37)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+ 2022-06-27 05:06:36 || [ [31merror[39m ] ▶ [31muncaughtException: graphqlErrorExecutor is not defined[39m
+[31mReferenceError: graphqlErrorExecutor is not defined[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/error/index.js:6:38)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+[31m    at Module.load (node:internal/modules/cjs/loader:975:32)[39m
+[31m    at Function.Module._load (node:internal/modules/cjs/loader:822:12)[39m
+[31m    at Module.require (node:internal/modules/cjs/loader:999:19)[39m
+[31m    at require (node:internal/modules/cjs/helpers:102:18)[39m
+[31m    at Object.<anonymous> (/Users/haileyjpark/internship/backend/junghyun/koa-books/src/common/auth/jwtService.js:3:37)[39m
+[31m    at Module._compile (node:internal/modules/cjs/loader:1099:14)[39m
+[31m    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)[39m
+ 2022-06-27 05:06:95 || [ [32minfo[39m ] ▶ [32m[Check the error stack] This Book doesn't exist.[39m
+ 2022-06-27 05:06:50 || [ [32minfo[39m ] ▶ [32m[Check the error stack] This Book doesn't exist.[39m
+ 2022-06-27 05:06:15 || [ [32minfo[39m ] ▶ [32m[Check the error stack] This Book doesn't exist.[39m
+ 2022-06-27 05:06:16 || [ [32minfo[39m ] ▶ [32m[Check the error stack] This Book doesn't exist.[39m
+ 2022-06-27 05:06:35 || [ [32minfo[39m ] ▶ [32m[Check the error stack] This Book doesn't exist.[39m
+ 2022-06-27 05:06:37 || [ [32minfo[39m ] ▶ [32m[Check the error stack] This Book doesn't exist.[39m
+ 2022-06-27 05:06:74 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 05:06:44 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 05:06:92 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 05:06:78 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 05:06:38 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 05:06:82 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 05:06:26 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 05:06:22 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:38 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:70 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:78 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:76 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:69 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:52 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:23 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:85 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:41 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:91 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:58 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:79 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:98 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:15 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:33 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:85 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:39 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:91 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:33 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m
+ 2022-06-27 06:06:70 || [ [32minfo[39m ] ▶ [32m[graphQL/services/getOneBook/NOT_EXIST_BOOK] This Book doesn't exist.[39m

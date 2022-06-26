@@ -2,15 +2,15 @@ const {
   DeactivatedReservation,
 } = require('../../db/models');
 
-const getOldReservations = async (data, { offset, limit }) => {
+const getOldReservations = async (data) => {
   const where = {};
   if (data.userId) { where.userId = data.userId; }
   if (data.bookInfoId) { where.bookId = data.bookInfoId; }
   const oldReservations = await DeactivatedReservation.findAll({
     where,
-    limit: limit || 10,
-    offset: offset || 0,
-    order: [['createdAt', 'DESC']],
+    limit: data?.limit || 10,
+    offset: data?.offset || 0,
+    order: [['reservationEndDate', 'DESC']],
   });
   return oldReservations;
 };

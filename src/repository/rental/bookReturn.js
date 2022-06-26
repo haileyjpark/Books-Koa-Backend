@@ -26,10 +26,10 @@ const createAvailableRentalDate = async (userId, returnDueDate, today) => {
 };
 
 // 반납 트랜잭션 로직
-const createReturnTransaction = async (rentalData) => {
+const createReturnTransaction = async (data) => {
   const {
     rentalCode, rentalDate, returnDueDate, bookId, userId, extension,
-  } = rentalData;
+  } = data;
   const transaction = await sequelize.transaction();
   try {
     const newBookReturn = await BookReturn.create({
@@ -86,13 +86,13 @@ const getOne = async (data) => {
   return bookReturn;
 };
 
-const getBookReturns = async (data, { offset, limit }) => {
+const getBookReturns = async (data) => {
   const where = {};
   if (data.userId) { where.userId = data.userId; }
   const bookReturns = await BookReturn.findAll({
     where,
-    limit: limit || 10,
-    offset: offset || 0,
+    limit: data?.limit || 10,
+    offset: data?.offset || 0,
     order: [['returnDate', 'DESC']],
   });
   return bookReturns;

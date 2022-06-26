@@ -2,7 +2,7 @@ const { gql } = require('apollo-server-koa');
 
 module.exports = gql`
     type User {
-        id: ID!
+        id: String!
         userName: String!
         email: String!
         password: String!
@@ -14,7 +14,7 @@ module.exports = gql`
     }
     
     type AdminUser {
-        id: ID!
+        id: String!
         userName: String!
         email: String!
         password: String!
@@ -28,6 +28,14 @@ module.exports = gql`
         USER
     }
     
+    type Authorization {
+        accessToken: String!
+        refreshToken: String!
+    }
+    type token {
+        Authorization: Authorization!
+    }
+
     input createUserInput {
         userName: String!
         email: String!
@@ -39,15 +47,17 @@ module.exports = gql`
     input signInInput {
         email: String!
         password: String!
-        userType: userType! 
     }
 
-    type Token {
-        Authorization: String!
+    input refreshTokenInput {
+        accessToken: String!
+        refreshToken: String!
     }
 
     type Mutation {
         signUp(input: createUserInput): String!
-        signIn(input: signInInput): Token!
+        adminSignIn(input: signInInput): token!
+        userSignIn(input: signInInput): token!
+        refreshAccessToken(input: refreshTokenInput): token!
     }
     `;

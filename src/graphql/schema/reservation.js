@@ -2,19 +2,19 @@ const { gql } = require('apollo-server-koa');
 
 module.exports = gql`
     type Reservation {
-        id: ID!
+        id: Int!
         reservationCode: String!
-        book: Book!
+        bookInfo: BookInfo!
         user: User!
-        reservationDate: String!
+        reservedDate: String!
         createdAt: String!
         updatedAt: String!
     }
     
     type DeactivatedReservation {
-        id: ID!
+        id: Int!
         reservationCode: String!
-        book: Book!
+        bookInfo: BookInfo!
         user: User!
         reservationStartDate: String!
         reservationEndDate: String!
@@ -38,16 +38,16 @@ module.exports = gql`
     }
 
     type Query {
-        getOneReservation(id: ID!): Reservation!
+        getOneReservation(id: Int!): Reservation!
         getAdminReservations(input: rentalQueryInput): [Reservation]!
         getUserReservations(input: rentalQueryInput): [Reservation]!
-        getOneOldReservation(id: ID!): DeactivatedReservation!
+        getOneOldReservation(id: Int!): DeactivatedReservation!
         getAdminOldReservations(input: rentalQueryInput): [DeactivatedReservation]!
         getUserOldReservations(input: rentalQueryInput): [DeactivatedReservation]!
     }
 
     type Mutation {
-        createReservation(input: createReservationInput): [Reservation]!
-        cancelReservation(id: ID!): Reservation!
+        createReservation(input: createReservationInput): Reservation!
+        cancelReservation(id: Int!): DeactivatedReservation!
     }
     `;
